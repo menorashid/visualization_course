@@ -1,0 +1,46 @@
+{
+	"folders":
+	[
+		{
+			"path": "code"
+		}
+	],
+	"settings":
+	{
+		"rsync_ssh":
+		{
+			"excludes":
+			[
+				".git*",
+				"_build",
+				"blib",
+				"Build"
+			],
+			"options":
+			[
+			],
+			"remotes":
+			{
+				"code":
+				[
+					{
+						"enabled": 1,
+						"excludes":
+						[
+						],
+						"options":
+						[
+						],
+						"remote_host": "vision3.cs.ucdavis.edu",
+						"remote_path": "/home/maheenrashid/viz_project/code",
+						"remote_port": 22,
+						"remote_post_command": "",
+						"remote_pre_command": "",
+						"remote_user": "maheenrashid"
+					}
+				],
+			},
+			"sync_on_save": true
+		}
+	}
+}

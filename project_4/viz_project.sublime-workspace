@@ -1,0 +1,820 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"model",
+				"model_name"
+			],
+			[
+				"aug",
+				"aug_more"
+			],
+			[
+				"train",
+				"train_lines"
+			],
+			[
+				"num",
+				"num_skipped"
+			],
+			[
+				"out_",
+				"out_lines"
+			],
+			[
+				"test_",
+				"test_lines"
+			],
+			[
+				"out",
+				"out_lines"
+			],
+			[
+				"str_",
+				"str_replace"
+			],
+			[
+				"pain",
+				"pain_level"
+			],
+			[
+				"bin",
+				"bin_keep"
+			],
+			[
+				"pain_",
+				"pain_files"
+			],
+			[
+				"gt_",
+				"gt_pain_dir"
+			],
+			[
+				"pe",
+				"people_dir"
+			],
+			[
+				"idx_",
+				"idx_test_dir"
+			],
+			[
+				"peopl",
+				"people_dirs"
+			],
+			[
+				"S",
+				"Sequence_Labels"
+			],
+			[
+				"scri",
+				"script_save_cropped_faces"
+			],
+			[
+				"size",
+				"size_im"
+			],
+			[
+				"bb",
+				"bbox_file"
+			],
+			[
+				"out_f",
+				"out_file_curr"
+			],
+			[
+				"in",
+				"in_file_curr"
+			],
+			[
+				"save",
+				"savegray"
+			],
+			[
+				"im_",
+				"im_list_in"
+			],
+			[
+				"all_",
+				"all_im"
+			],
+			[
+				"gt_pa",
+				"gt_pain_anno_dir"
+			],
+			[
+				"sequ",
+				"sequence_name"
+			],
+			[
+				"gt_p",
+				"gt_pain_anno_dirs"
+			],
+			[
+				"seuq",
+				"sequence_names"
+			],
+			[
+				"seq",
+				"sequence_dir"
+			],
+			[
+				"seque",
+				"sequence_dirs"
+			],
+			[
+				"file",
+				"files_all"
+			],
+			[
+				"ann",
+				"anno_curr"
+			],
+			[
+				"an",
+				"anno_curr"
+			],
+			[
+				"anno",
+				"anno_rel"
+			],
+			[
+				"im",
+				"im_dir_meta"
+			],
+			[
+				"frame",
+				"frame_dir"
+			],
+			[
+				"all",
+				"all_facs"
+			],
+			[
+				"fac",
+				"fac_curr"
+			],
+			[
+				"line",
+				"line_curr"
+			],
+			[
+				"batch_size",
+				"batch_size"
+			],
+			[
+				"lis",
+				"list_of_to_dos"
+			],
+			[
+				"li",
+				"list_of_to_dos"
+			],
+			[
+				"test",
+				"test_weights"
+			],
+			[
+				"pred_",
+				"pred_print"
+			],
+			[
+				"pred",
+				"predictions"
+			],
+			[
+				"class",
+				"class_weights"
+			],
+			[
+				"clas",
+				"class_weights"
+			],
+			[
+				"list_t",
+				"list_transforms_val"
+			],
+			[
+				"num_",
+				"num_capsules"
+			],
+			[
+				"marg",
+				"margin_params"
+			],
+			[
+				"b",
+				"bgr"
+			],
+			[
+				"train_",
+				"train_file"
+			],
+			[
+				"c",
+				"criterion"
+			],
+			[
+				"bat",
+				"batch_size"
+			],
+			[
+				"split",
+				"split_num"
+			],
+			[
+				"out_dir",
+				"out_dir_train_test"
+			],
+			[
+				"out_file_",
+				"out_file_train"
+			],
+			[
+				"htm",
+				"html_captions"
+			],
+			[
+				"html",
+				"html_captions"
+			],
+			[
+				"html_row",
+				"html_row_curr"
+			],
+			[
+				"clos",
+				"closest_idx"
+			],
+			[
+				"caps",
+				"caps_dim"
+			],
+			[
+				"mag_",
+				"mag_range"
+			],
+			[
+				"fil",
+				"filt_num"
+			],
+			[
+				"lines",
+				"lines_to_print"
+			],
+			[
+				"make",
+				"make_anno_file"
+			],
+			[
+				"sub",
+				"sub_legend_entries"
+			],
+			[
+				"meta",
+				"meta_legend_entries"
+			],
+			[
+				"plot",
+				"plot_colored_mats"
+			],
+			[
+				"range",
+				"range"
+			],
+			[
+				"get_",
+				"get_primary_caps_emotion_dot"
+			],
+			[
+				"mags_curr",
+				"mags_curr_to_cluster"
+			],
+			[
+				"caps_curr",
+				"caps_curr_to_cluster"
+			],
+			[
+				"num_to",
+				"num_to_keep_cluster"
+			],
+			[
+				"mag",
+				"mag_percent"
+			],
+			[
+				"idx_sort",
+				"idx_sort_mags"
+			],
+			[
+				"list",
+				"list_transforms"
+			],
+			[
+				"hid",
+				"hide_and_seek"
+			],
+			[
+				"hib",
+				"hide_probs"
+			],
+			[
+				"hide_",
+				"hide_prob"
+			],
+			[
+				"gri",
+				"grid_size"
+			],
+			[
+				"trai",
+				"train_dataloader"
+			],
+			[
+				"forwa",
+				"forward_debug"
+			],
+			[
+				"for",
+				"forward_debug"
+			],
+			[
+				"cluster",
+				"cluster_centers"
+			],
+			[
+				"arr",
+				"arr_to_keep"
+			],
+			[
+				"con",
+				"concatenate"
+			],
+			[
+				"out_file",
+				"out_file_curr"
+			],
+			[
+				"cap",
+				"caption_rows"
+			],
+			[
+				"im_r",
+				"im_rows"
+			],
+			[
+				"captio",
+				"caption_row"
+			],
+			[
+				"dir",
+				"dir_server"
+			],
+			[
+				"arg",
+				"arg_multi_dim"
+			],
+			[
+				"get",
+				"get_caps_compiled"
+			],
+			[
+				"nor",
+				"norm"
+			],
+			[
+				"vec_",
+				"vec_rel"
+			],
+			[
+				"out_dir_",
+				"out_dir_curr"
+			],
+			[
+				"capt",
+				"captions_html"
+			],
+			[
+				"str",
+				"str_replace"
+			],
+			[
+				"conv",
+				"convnet"
+			],
+			[
+				"mode",
+				"model_name"
+			],
+			[
+				"batch",
+				"batch_size_val"
+			],
+			[
+				"calss",
+				"class_rel"
+			],
+			[
+				"sa",
+				"save_visualizations"
+			],
+			[
+				"expe",
+				"exp_name"
+			],
+			[
+				"legen",
+				"legend_strs"
+			],
+			[
+				"val_arr",
+				"val_arr_all"
+			],
+			[
+				"val_",
+				"val_arr_all"
+			],
+			[
+				"para",
+				"params_arr"
+			],
+			[
+				"comman",
+				"commands_all"
+			],
+			[
+				"comm",
+				"command_str"
+			],
+			[
+				"exp",
+				"exp_name"
+			],
+			[
+				"True",
+				"True"
+			],
+			[
+				"w",
+				"wdecay"
+			],
+			[
+				"vgg_",
+				"vgg_base_file_str"
+			],
+			[
+				"strs",
+				"strs_append"
+			],
+			[
+				"loss",
+				"lossweights"
+			],
+			[
+				"script_save",
+				"script_save_align_im"
+			],
+			[
+				"avg_",
+				"avg_pts_file"
+			],
+			[
+				"out_d",
+				"out_dir_im"
+			],
+			[
+				"kp_org",
+				"kp_org_file"
+			],
+			[
+				"em",
+				"emotionet_kp"
+			],
+			[
+				"scr",
+				"scratch"
+			],
+			[
+				"save_res",
+				"save_resize_kp_mp"
+			],
+			[
+				"im_org",
+				"im_org_file"
+			],
+			[
+				"out_dir_kp",
+				"out_dir_kp_org"
+			],
+			[
+				"kp_",
+				"kp_in_file"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 629.0
+	},
+	"console":
+	{
+		"height": 824.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/visualization_course/project_4/code"
+	],
+	"file_history":
+	[
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/script_for_visualizations.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/CapsuleLayer.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/redoing_9_4_exp.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/darknet/requirements.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/face-alignment/setup.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/requirements.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/analysis/primary_caps_visualizing.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/analysis/checking_au.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/helpers/visualize.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/analysis/overfitting.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/data_processors/preprocess_emotionet.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/data_processors/preprocess_bp4d.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/data_processors/preprocess_mmi.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule_7_3_with_dropout.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/train_test_caps.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/exp_exp_emotionet.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/helpers/util.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/helpers/augmenters.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/darknet/get_video_results.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/darknet/Makefile",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/eccv_18.sublime-project",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/save_visualizations.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/exp_bp4d_vgg.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/dataset.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/exp_exp_dropout.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/showing_overfitting.py",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/05_02_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/04_30_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/01_05_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/travel_cvpr_18/volunteer_app.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/04_29_18.txt",
+		"/Users/maheenrashid/Desktop/essays_asad.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/04_17_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/this 25",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/housing_18_19/multifaith_app.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/darknet/image_voc.sh",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/darknet/net_cam_voc.sh",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_7_3_bigclass.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/helpers/receptive_field.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/exp_au_dropout.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_7_3_with_dropout.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/dynamic_capsules.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_7_3_bigclass_with_dropout.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/face-alignment/face_alignment/utils.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/face-alignment/face_alignment/api.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_7_3_gray.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/analysis/getting_accuracy.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/data_processors/preprocess_disfa.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule_7_3.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_7_3.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule_7_3_smallrecon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/analysis/visualizing_recon_new.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/list_of_bl_exp.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/capsules/models/model.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_ck_96.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/data_processors/preprocess_oulu.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/data_processors/preprocess_ck.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/list_of_exp_kh_recon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/list_of_exp_vgg_recon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/Research/expression_code/python/preprocess_data.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/exp_7_3_pretrained_init.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/capsules/experiment.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_7_3_color.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_7_3_bigclass_pretrained.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/analysis/visualizing_caps.py",
+		"/Users/maheenrashid/Desktop/account number:",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/exp_7_3_withau.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_9_4.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/list_of_oulu_exp_vgg.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule_disfa_2class_withrecon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_7_3_bigrecon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_7_3_2class.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_9_4_old.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/list_of_disfa_exp.py",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/02_27_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/02_26_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/03_01_2018.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/02_28_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_2class_withrecon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/data_processors/rough_work.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_withrecon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/list_of_khorrami_caps_exp.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule_disfa_bigprimary_withrecon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule_disfa_bigprimary_bigclass_withrecon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule_disfa_lastft_withrecon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule_disfa_bigprimary_lessdim_withrecon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/data/demo.lua",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/spread_loss.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/list_of_oulu_exp_recon.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/horse_alexnet.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/alexnet.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/rough_work.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/testing_multilabel.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/dummy_model.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/helpers/convert_torch.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/data_processors/preprocess_bp4d.pt",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_full_capsule.py",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/02_23_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/02_24_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/02_22_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/02_21_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/binary_search.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/train_test.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_reconstruct.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/__init__.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_capsule_disfa_bigprimary.py",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/02_25_18.txt",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/vgg_caps_disfa.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/list_of_oulu_exp.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/VGG_FACE.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/train_ck.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/recovery_script.sh",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/list_of_caps_exp.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/convolution_baseline_tf.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/capsule-networks-master/capsule_network.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/capsule-networks-master/capsule_network_debug.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/capsules/input_data/ck/ck_input_record.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/capsules/input_data/ck/creat_ck_tfrecord.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/capsules/input_data/ck/ck_input_record_broken.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/capsules/getting_data_sorted.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/figuring_out_aug.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/caps_for_96.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/capsules/models/layers/layers.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/models/khorrami_capsule_super_small.py",
+		"/Users/maheenrashid/Dropbox (Personal)/Davis_docs/eccv_18/code/capsules/models/conv_model.py",
+		"/Users/maheenrashid/Dropbox (Personal)/lab_notebook/02_15_18.txt"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 27.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "viz_project.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"test_tps",
+				"~/Dropbox (Personal)/Davis_docs/Research/horses/torch/test_tps.th"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 443.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 312.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
