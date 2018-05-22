@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "code"
+		},
+		{
+			"path": "new_idea"
 		}
 	],
 	"settings":
@@ -24,7 +27,7 @@
 				"code":
 				[
 					{
-						"enabled": 1,
+						"enabled": 0,
 						"excludes":
 						[
 						],
@@ -39,8 +42,26 @@
 						"remote_user": "maheenrashid"
 					}
 				],
+				"new_idea":
+				[
+					{
+						"enabled": 0,
+						"excludes":
+						[
+						],
+						"options":
+						[
+						],
+						"remote_host": "vision3.cs.ucdavis.edu",
+						"remote_path": "/home/maheenrashid/viz_project/new_idea",
+						"remote_port": 22,
+						"remote_post_command": "",
+						"remote_pre_command": "",
+						"remote_user": "maheenrashid"
+					}
+				]
 			},
-			"sync_on_save": true
+			"sync_on_save": false
 		}
 	}
 }

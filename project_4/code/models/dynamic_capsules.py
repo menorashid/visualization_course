@@ -351,81 +351,86 @@ def main():
     num_classes = 10
     network = Network(num_classes)
     model = network.model
-    print model
-    # model.load_state_dict(torch.load('epochs/epoch_327.pt'))
-    model.cuda()
+    # print model
+    for p in model.features[0].parameters():
+        print p.data.size()
+    # print 
+
+
+    # # model.load_state_dict(torch.load('epochs/epoch_327.pt'))
+    # model.cuda()
     
-    print("# parameters:", sum(param.numel() for param in model.parameters()))
-    lr = [0.001]
-    decay_rate = 0.96
-    decay_steps = 469
-    min_lr = 1e-6
-    optimizer = Adam(network.get_lr_list(lr))
-    # exp_lr_scheduler = Exp_Lr_Scheduler(optimizer,0,lr,decay_rate,decay_steps,min_lr)
+    # print("# parameters:", sum(param.numel() for param in model.parameters()))
+    # lr = [0.001]
+    # decay_rate = 0.96
+    # decay_steps = 469
+    # min_lr = 1e-6
+    # optimizer = Adam(network.get_lr_list(lr))
+    # # exp_lr_scheduler = Exp_Lr_Scheduler(optimizer,0,lr,decay_rate,decay_steps,min_lr)
 
-    batch_size = 4
-    test_batch_size = 4
+    # batch_size = 4
+    # test_batch_size = 4
 
-    kwargs = {'num_workers': 1, 'pin_memory': True}
-     # if args.cuda else {}
+    # kwargs = {'num_workers': 1, 'pin_memory': True}
+    #  # if args.cuda else {}
 
-    transformer = transforms.Compose([
-                       transforms.ToTensor(),
-                       transforms.Normalize((0.1307,), (0.3081,))
-                   ])
-    train_data = datasets.MNIST('../../data/mnist_downloaded', train=True, transform = transformer)
-    test_data = datasets.MNIST('../../data/mnist_downloaded', train=False, download = True, transform = transformer)
+    # transformer = transforms.Compose([
+    #                    transforms.ToTensor(),
+    #                    transforms.Normalize((0.1307,), (0.3081,))
+    #                ])
+    # train_data = datasets.MNIST('../../data/mnist_downloaded', train=True, transform = transformer)
+    # test_data = datasets.MNIST('../../data/mnist_downloaded', train=False, download = True, transform = transformer)
 
-    train_loader = torch.utils.data.DataLoader(train_data, batch_size=batch_size, shuffle=True, **kwargs)
-    test_loader = torch.utils.data.DataLoader(test_data,batch_size=test_batch_size, shuffle=True, **kwargs)
+    # train_loader = torch.utils.data.DataLoader(train_data, batch_size=batch_size, shuffle=True, **kwargs)
+    # test_loader = torch.utils.data.DataLoader(test_data,batch_size=test_batch_size, shuffle=True, **kwargs)
 
-    class_weights = np.array([0.1]*10)
-    print class_weights
-    model.class_weights = class_weights
-    disp_after = 1
-    num_epochs = 10
-    model.train()
-    for epoch_num in range(num_epochs):
-        for batch_idx, (data, labels) in enumerate(train_loader):
+    # class_weights = np.array([0.1]*10)
+    # print class_weights
+    # model.class_weights = class_weights
+    # disp_after = 1
+    # num_epochs = 10
+    # model.train()
+    # for epoch_num in range(num_epochs):
+    #     for batch_idx, (data, labels) in enumerate(train_loader):
             
             
 
-            # print data.shape, torch.min(data), torch.max(data)
-            # print labels.shape, torch.min(labels), torch.max(labels)
+    #         # print data.shape, torch.min(data), torch.max(data)
+    #         # print labels.shape, torch.min(labels), torch.max(labels)
             
-            # print labels.shape, torch.min(labels), torch.max(labels)
+    #         # print labels.shape, torch.min(labels), torch.max(labels)
             
-            # labels_simple = torch.sparse.torch.eye(num_classes).index_select(dim=0, index=labels)
-            labels_simple = labels
-            data, labels = data.cuda(), labels.cuda()
-            data, labels = Variable(data), Variable(labels)
-            optimizer.zero_grad()
+    #         # labels_simple = torch.sparse.torch.eye(num_classes).index_select(dim=0, index=labels)
+    #         labels_simple = labels
+    #         data, labels = data.cuda(), labels.cuda()
+    #         data, labels = Variable(data), Variable(labels)
+    #         optimizer.zero_grad()
             
-            classes = model(data)
-            # classes, reconstructions = model(data, labels)
-            # raw_input()
-            # print classes.shape, reconstructions.shape
-            # else:
-            #     classes, reconstructions = model(data)
+    #         classes = model(data)
+    #         # classes, reconstructions = model(data, labels)
+    #         # raw_input()
+    #         # print classes.shape, reconstructions.shape
+    #         # else:
+    #         #     classes, reconstructions = model(data)
 
-            loss = model.spread_loss(classes, labels)
-            # margin_loss( classes,labels)
-            # 
-            # 
-            # # , reconstructions)
+    #         loss = model.spread_loss(classes, labels)
+    #         # margin_loss( classes,labels)
+    #         # 
+    #         # 
+    #         # # , reconstructions)
 
-            if batch_idx % disp_after ==0:  
-                print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
-                    epoch_num, batch_idx * len(data), len(train_loader.dataset),
-                    100. * batch_idx / len(train_loader), loss.data[0]))
+    #         if batch_idx % disp_after ==0:  
+    #             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+    #                 epoch_num, batch_idx * len(data), len(train_loader.dataset),
+    #                 100. * batch_idx / len(train_loader), loss.data[0]))
 
             
-            loss.backward()
-            optimizer.step()
-            step_curr = len(train_loader)*epoch_num+batch_idx
-            exp_lr_scheduler.step()
-            # (optimizer, step_curr, lr, decay_rate, decay_steps, min_lr = min_lr)
-            print step_curr,optimizer.param_groups[-1]['lr']
+    #         loss.backward()
+    #         optimizer.step()
+    #         step_curr = len(train_loader)*epoch_num+batch_idx
+    #         exp_lr_scheduler.step()
+    #         # (optimizer, step_curr, lr, decay_rate, decay_steps, min_lr = min_lr)
+    #         print step_curr,optimizer.param_groups[-1]['lr']
             
         
              
