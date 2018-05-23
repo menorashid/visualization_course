@@ -289,11 +289,17 @@ def check():
 
 def main(args):
 
-    out_dir_pre = '../experiments/cifar_10_alex'
+    # out_dir_pre = '../experiments/cifar_10_alex'
 
+    out_dir_meta = '../scratch'
+    model_name = 'cifar_10_alex_relum_simple_stripped'
+    out_dir_pre = os.path.join(out_dir_meta, model_name)
+    print out_dir_pre
+    raw_input()
+    # best settings yet.
     script_train([0.001,0.001],
                 out_dir_pre,
-                model_name='cifar_10_alex',
+                model_name= model_name,
                 epoch_stuff=[25,
                 50],
                 exp = False,
