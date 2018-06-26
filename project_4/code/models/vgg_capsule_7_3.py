@@ -100,6 +100,19 @@ class Vgg_Capsule(Dynamic_Capsule_Model_Super):
             else:
                 return classes
 
+    def forward_for_viz(self, data, y = None,return_caps = False):
+        x = self.vgg_base(data)
+        # print x.size()
+        x = self.features(x)
+        # print x.size()
+        x = x.view(x.size(0),x.size(1),x.size(4))
+        # x = x.squeeze()
+        
+        classes = (x ** 2).sum(dim=-1) ** 0.5
+        
+        return classes
+
+
     def margin_loss(self,  classes,labels):
         if self.reconstruct:
             images = classes[2]

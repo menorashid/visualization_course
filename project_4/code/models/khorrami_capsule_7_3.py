@@ -60,11 +60,23 @@ class Khorrami_Capsule(Dynamic_Capsule_Model_Super):
             )
             self.upsampler = nn.Upsample(size=(96,96), mode='bilinear')
 
-    
+    def forward_for_viz(self, data, y = None,return_caps = False):
+        x = self.features(data)
+        x = self.caps(x)
+        x = x.view(x.size(0),x.size(1),x.size(4))
+        # print x.size()
+        # x = x.squeeze()
+        
+        classes = (x ** 2).sum(dim=-1) ** 0.5
+        # classes = F.softmax(classes)
+        return classes
+
     def forward(self, data, y = None,return_caps = False):
         x = self.features(data)
         x = self.caps(x)
-        x = x.squeeze()
+        x = x.view(x.size(0),x.size(1),x.size(4))
+        # print x.size()
+        # x = x.squeeze()
         
         classes = (x ** 2).sum(dim=-1) ** 0.5
         classes = F.softmax(classes)

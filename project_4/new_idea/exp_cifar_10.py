@@ -117,7 +117,7 @@ def script_train(lr,
     
     train_data = torchvision.datasets.CIFAR10(root='../data/cifar_10/', train=True,
                                             download=True, transform=data_transforms['train'])
-    test_data = torchvision.datasets.CIFAR10(root='../data./cifar_10/', train=False,
+    test_data = torchvision.datasets.CIFAR10(root='../data/cifar_10/', train=False,
                                            download=True, transform=data_transforms['val'])
     print len(train_data)
     print len(test_data)

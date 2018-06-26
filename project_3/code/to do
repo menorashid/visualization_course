@@ -1,0 +1,73 @@
+to do
+
+
+subplot these - done. not looking good skipping.
+sort out idx
+
+___
+this 25:
+	get border pts - done
+	plot them - done
+	make a voronoi - done
+	plot it - done
+
+this 25:
+	figure out voronoi stuff - done
+	figure out inside outside - done
+
+this 25:
+	test inside outside - done
+	break up convex shape into triangles - done
+	test inside outside with convex poly - done
+
+this 25:
+	find perpendicular bisector pts - done
+	plot it - done
+	find border pts by equidistant rule
+	work out equation - done
+
+	convert infinite lines into finite lines
+	
+		find pts of intersection of line and bounding box
+
+	region list - pt., get line that is defined by pt and upcoming vor vert neighbor
+
+this 25:
+	get ridge list - done
+
+this 25:
+	make  class - done
+	move functions - done
+	get ridge lines - done
+	plot - done
+
+this 25:
+	test more than 4 polylines
+	convert lines in to polylines
+	get neighborhood info
+
+you can definitely do this
+
+this 25:
+	make sib - done
+	plot - done
+	do inside outside for non edge regions
+		get polyline from region idx
+		repeat last
+		use conv function
+
+
+this 25:
+	get two points for pb - done
+
+this 25:
+	get polyline intersections - done
+	get on line segment intersections - doen
+
+
+later:
+	if inside, give val of pt to sib point - done
+
+
+
+
