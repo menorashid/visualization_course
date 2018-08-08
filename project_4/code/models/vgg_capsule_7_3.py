@@ -110,8 +110,26 @@ class Vgg_Capsule(Dynamic_Capsule_Model_Super):
         
         classes = (x ** 2).sum(dim=-1) ** 0.5
         
-        return classes
+        if return_caps:
+            return classes, x
+        else:
+            return classes
 
+
+    def forward_for_viz_primary(self, data, y = None,return_caps = False):
+        x = self.vgg_base(data)
+        # print x.size()
+        x = self.features[0].forward(x)
+        # print x.size()
+        # x = x.view(x.size(0),x.size(1),x.size(4))
+        # x = x.squeeze()
+        
+        x = (x ** 2).sum(dim=-1) ** 0.5
+        return x
+        # if return_caps:
+        #     return classes, x
+        # else:
+        #     return classes
 
     def margin_loss(self,  classes,labels):
         if self.reconstruct:

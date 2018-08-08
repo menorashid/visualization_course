@@ -275,7 +275,7 @@ class Bp4d_Dataset(generic_dataset):
 
 class Bp4d_Dataset_with_mean_std_val(generic_dataset):
 
-    def __init__(self, text_file, mean_std = None, resize = None, binarize = False, transform=None, bgr= False):
+    def __init__(self, text_file, mean_std = None, resize = None, binarize = False, transform=None, bgr= False, no_anno = False):
         super(Bp4d_Dataset_with_mean_std_val, self).__init__(text_file,transform)
         # self.mean = scipy.misc.imread(mean_file)
         # .astype(np.float32)
@@ -285,7 +285,7 @@ class Bp4d_Dataset_with_mean_std_val(generic_dataset):
         self.resize = resize
         self.binarize = binarize
         self.bgr = bgr
-
+        self.no_anno = no_anno
         # if self.resize is not None:
             # self.mean = scipy.misc.imresize(self.mean,(self.resize,self.resize))
             # .astype(np.float32)
@@ -312,15 +312,20 @@ class Bp4d_Dataset_with_mean_std_val(generic_dataset):
         train_file_curr = self.files[idx]
         info = train_file_curr.split(' ')
         train_file_curr = info[0]
-        labels = [int(val) for val in info[1:]]
-        labels = np.array(labels)
 
-        # .astype('float')
-        if self.binarize :
-            # print labels
-            labels[labels>0]=1
-            labels[labels<1]=0
-        # labels[labels<0.5]=0.1
+        if self.no_anno:
+            labels = []
+        else:
+            labels = [int(val) for val in info[1:]]
+            labels = np.array(labels)
+
+            # .astype('float')
+            if self.binarize :
+                # print labels
+                labels[labels>0]=1
+                labels[labels<1]=0
+            # labels[labels<0.5]=0.1
+
         image = scipy.misc.imread(train_file_curr)
         # print image.shape
         if self.bgr:
