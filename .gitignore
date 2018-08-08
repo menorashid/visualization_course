@@ -43,3 +43,11 @@ everything_else
 *.pptx
 project_4/writing
 *.pyc
+
+
+*.pth
+*.pt
+*.sublime-project
+*.sublime-workspace
+*.txt
+*.png
