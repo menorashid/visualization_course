@@ -81,6 +81,12 @@ class Deep_Dream():
 
 
     def primary_objective(self,dst, guide_features):
+        # print guide_features
+        # print filt_vals.shape
+        # print filt_vals
+        # print np.sum(filt_vals==0)
+        # print np.argmax(filt_vals)
+        # raw_input()
         grad = dst.data.clone()
         
         grad.fill_(0)
@@ -194,9 +200,11 @@ class Deep_Dream():
         guide_features = control
         print 'sigma',sigma
         for i in range(num_iterations):
+            # print guide_features
+            
             shift_x, shift_y = np.random.randint(-max_jitter, max_jitter + 1, 2)
             img = np.roll(np.roll(img, shift_x, -1), shift_y, -2)
-            # apply jitter shift
+            
             model.zero_grad()
             img_tensor = torch.Tensor(img)
             if torch.cuda.is_available():
@@ -206,6 +214,16 @@ class Deep_Dream():
 
             # print img_variable.size()
             act_value = model.forward_for_viz_primary(img_variable)
+            if guide_features[0] is None and i==0:
+                filt_vals = act_value.data.cpu().numpy()[0,:,guide_features[1],guide_features[2]]
+                if np.max(filt_vals)==0:
+                    img = None
+                    break
+
+                # print filt_vals.shape, np.min(filt_vals),np.max(filt_vals),np.argmax(filt_vals),np.max(filt_vals)
+                guide_features[0]=np.argmax(filt_vals)
+
+            
             diff_out = self.primary_objective(act_value, guide_features)
             act_value.backward(diff_out)
 
@@ -247,8 +265,10 @@ class Deep_Dream():
                     img[:,:,2] = nd.filters.gaussian_filter(img[:,:,2],sigma)
                     img = img.transpose(2,0,1)[np.newaxis,:,:,:]
                     
-        return img
+        return img,guide_features
 
+
+    
     def dream_primary_caps(self,model,
               in_file,
               octave_n=3,
@@ -302,9 +322,13 @@ class Deep_Dream():
             h, w = octave_base.shape[-2:]
             input_oct = octave_base + detail
             print octave, sigma
-            out = self.make_step_primary(input_oct, model, control, distance=distance,sigma=sigma[octave], caps = True,color = color,num_iterations = num_iterations,learning_rate = learning_rate, return_caps = return_caps, max_jitter = max_jitter)
+            out,control = self.make_step_primary(input_oct, model, control, distance=distance,sigma=sigma[octave], caps = True,color = color,num_iterations = num_iterations,learning_rate = learning_rate, return_caps = return_caps, max_jitter = max_jitter)
+            
+            if out is None:
+                return None, None
+
             detail = out - octave_base
-        return self.showtensor(out)
+        return self.showtensor(out),control
 
 
     def dream_fc_caps(self,model,

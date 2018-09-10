@@ -1,5 +1,17 @@
 import os
 import torch
+import torch._utils
+try:
+    torch._utils._rebuild_tensor_v2
+except AttributeError:
+    def _rebuild_tensor_v2(storage, storage_offset, size, stride, requires_grad, backward_hooks):
+        tensor = torch._utils._rebuild_tensor(storage, storage_offset, size, stride)
+        tensor.requires_grad = requires_grad
+        tensor._backward_hooks = backward_hooks
+        return tensor
+    torch._utils._rebuild_tensor_v2 = _rebuild_tensor_v2
+
+
 from torchvision import transforms
 from PIL import Image
 from resnet import resnet50
@@ -16,7 +28,7 @@ from torch.autograd import Variable
 import glob
 import sklearn.metrics.pairwise
 import itertools
-
+from models.vgg_face_finetune import Vgg_Face
 import shutil
 
 dir_server = '/disk3'
@@ -24,6 +36,85 @@ str_replace = ['..',os.path.join(dir_server,'maheen_data/eccv_18')]
 str_replace_viz = ['..',os.path.join(dir_server,'maheen_data/viz_project')]
 click_str = 'http://vision3.idav.ucdavis.edu:1000'
 au_map = [1,2,4,6,7,10,12,14,15,17,23,24]   
+
+def deep_dream_vgg_ft(in_file=None, out_dir_im=None, octave_n=None, num_iterations=None, learning_rate=None, sigma = None, return_caps = False, primary = False, filter_range = range(32), x_range = range(7), y_range = range(7)):
+
+    model_name = 'vgg_face_finetune/bp4d_256_train_test_files_256_color_align_0_False_MultiLabelSoftMarginLoss_10_step_5_0.1_0_0.0001_0.001_0.001_False'
+    model_file_name = 'model_8_just_dict.pt'
+    
+
+    model_file = os.path.join('../../eccv_18/experiments', model_name, model_file_name)
+
+    
+    type_data = 'train_test_files_256_color_align'; n_classes = 12;
+    train_pre = os.path.join('../data/bp4d',type_data)
+    test_pre =  os.path.join('../data/bp4d',type_data)
+    
+
+    split_num = 0
+    train_file = os.path.join(train_pre,'train_'+str(split_num)+'.txt')
+    test_file = os.path.join(test_pre,'test_'+str(split_num)+'.txt')
+    assert os.path.exists(train_file)
+    assert os.path.exists(test_file)
+
+    print 'HELLOOOOO'
+
+    mean_file = 'vgg'
+    std_file = 'vgg'
+
+    test_im = [line.split(' ')[0] for line in util.readLinesFromFile(test_file)]
+    # in_file = test_im[0]
+
+    # bl_khorrami_ck_96/split_0_100_100_0.01_0.01/model_99.pt';
+    model = Vgg_Face(n_classes=12)
+    model.load_state_dict(torch.load(model_file))
+    model = model.cuda()
+    # model = torch.load(model_file)
+    print model
+
+    dreamer = Deep_Dream(mean_file,std_file)
+
+    au_list = [1,2,4,6,7,10,12,14,15,17,23,24]
+    
+    # out_dir_im = os.path.join(out_dir,'au_color_gauss_5e-1_200')
+    util.mkdir(out_dir_im)
+
+    tups = []
+
+    if primary:
+        for x,y in itertools.product(x_range, y_range):
+
+        # range(32):
+        #     for x,y in [(2,),(2,3),(3,2),(3,3)]:
+
+            control = [None,x,y]
+            print control
+            out_im,control = dreamer.dream_primary_caps(model,in_file, octave_n = octave_n, control =control ,color = True,num_iterations = num_iterations, learning_rate = learning_rate, sigma= sigma, max_jitter = 0)
+
+            if out_im is None:
+                continue
+
+            out_im = out_im[:,:,::-1]
+            file_str = '_'.join([str(val) for val in control])+'.jpg'
+            out_file = os.path.join(out_dir_im, file_str)
+            
+            print out_file
+            tups.append(tuple(control))
+            scipy.misc.imsave(out_file, out_im)
+            # raw_input()
+    else:
+        for control,au in enumerate(au_list):
+            out_file = os.path.join(out_dir_im, str(au))
+            print octave_n, sigma
+            out_im = dreamer.dream_fc_caps(model,in_file, octave_n = octave_n, control =control ,color = True,num_iterations = num_iterations, learning_rate = learning_rate, sigma= sigma, return_caps = return_caps)[:,:,::-1]
+            
+
+    visualize.writeHTMLForFolder(out_dir_im)
+    return tups
+
+
+
+
 
 def deep_dream(in_file=None, out_dir_im=None, octave_n=None, num_iterations=None, learning_rate=None, sigma = None, return_caps = False, primary = False, filter_range = range(32), x_range = range(6), y_range = range(6)):
 

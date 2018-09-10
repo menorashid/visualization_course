@@ -28,6 +28,56 @@ def deprocess(image):
 
 
 
+def main():
+    out_dir = '../scratch/deep_dream_on_nb'
+# if not os.path.exists(out_dir):
+    mkdir(out_dir)
+
+    normalise = transforms.Normalize(
+        mean=[0.485, 0.456, 0.406],
+        std=[0.229, 0.224, 0.225]
+        )
+
+    preprocess = transforms.Compose([
+        transforms.Resize((224,224)),
+        transforms.ToTensor(),
+        normalise
+        ])
+
+    model_urls['vgg16'] = model_urls['vgg16'].replace('https://', 'http://')
+    vgg = torchvision.models.vgg16(pretrained=True)
+
+    # vgg = models.vgg16(pretrained=True)
+    vgg = vgg.cuda()
+    print(vgg)
+    modulelist = list(vgg.features.modules())
+
+    out_dir = '../scratch/rand'
+    # visualize.writeHTMLForFolder(out_dir)
+
+
+    # in_file = os.path.join(out_dir,'sky_eye.jpg')
+    in_file = os.path.join(out_dir,'rand.jpg')
+
+    # rand_noise_im = np.uint8(np.random.randint(256,size = (224,224,3)))
+    # scipy.misc.imsave(in_file, rand_noise_im)
+
+    # sky-dd.jpeg'
+    sky = load_image(in_file)
+    # print sky.shape
+    num_iter = 10
+    lr = 0.05
+    cat = 281
+
+    # deep_dream_vgg(image, layer, iterations, lr, octave_scale, num_octaves,out_file)
+    for num_iter in range(25,50,5):
+        out_file = os.path.join(out_dir,'_'.join([str(val) for val in [num_iter, lr, cat]])+'.jpg')
+        deep_dream_vgg(sky, 28, num_iter, 0.3, 2, 20, out_file)
+        print 'done with ',out_file
+
+    visualize.writeHTMLForFolder(out_dir)
+
+
 
 
 def make_step(net, step_size=1.5, end='inception_4c/output', clip=True, focus=None, sigma=None):
@@ -127,3 +177,5 @@ def deepdraw(net, base_img, octaves, random_crop=True, visualize=True, focus=Non
             
     # returning the resulting image
     return deprocess(net, image)
+
+
